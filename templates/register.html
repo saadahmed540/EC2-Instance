@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #1c1c1c, #4c4c4c); /* Dark gradient background */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(34, 34, 34, 0.9); /* Semi-transparent dark gray */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Darker shadow for depth */
+            width: 350px;
+            text-align: center;
+            color: #fff; /* White text for contrast */
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #fff; /* White color for the header */
+        }
+
+        label {
+            color: #fff; /* White color for labels */
+            display: block; /* Block display for better spacing */
+            margin-top: 10px; /* Add margin for spacing */
+            text-align: left; /* Align text to the left */
+        }
+
+        input[type="text"], input[type="password"], input[type="file"] {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #444; /* Dark border */
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border 0.3s;
+            background-color: #555; /* Dark background for inputs */
+            color: #fff; /* White text for inputs */
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            border: 1px solid #ff5722; /* Border color on focus */
+            outline: none;
+        }
+
+        input[type="submit"], .login-button {
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            transition: background 0.3s, transform 0.3s;
+            background-color: #ff5722; /* Orange for register */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e64a19;
+            transform: translateY(-2px); /* Lift effect */
+        }
+
+        .login-button {
+            background-color: #009688; /* Teal for login */
+        }
+
+        .login-button:hover {
+            background-color: #00796b;
+            transform: translateY(-2px); /* Lift effect */
+        }
+
+        a {
+            text-decoration: none;
+            color: #ff5722; /* Orange for links */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 400px) {
+            .container {
+                width: 90%; /* Responsive design */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form method="POST" action="/register" enctype="multipart/form-data">
+            <label for="username">Username:</label>
+            <input type="text" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" required><br>
+
+            <label for="firstname">First Name:</label>
+            <input type="text" name="firstname" required><br>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" name="lastname" required><br>
+
+            <label for="email">Email:</label>
+            <input type="text" name="email" required><br>
+
+            <label for="file">Upload a text file:</label>
+            <input type="file" name="filename" accept=".txt"><br>
+
+            <input type="submit" value="Register">
+        </form>
+
+        <p>Already have an account? <a href="/login" class="login-button">Login</a></p>
+    </div>
+</body>
+</html>
+

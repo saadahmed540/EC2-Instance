@@ -1,0 +1,25 @@
+Team-2
+
+Employee Management System.
+
+Roles : Admin 
+             Employee(view, edit)
+
+Functionality : 1. List all employees
+                           2. Search employee by employee Id
+                           3. Delete Employee by employee Id
+                           4. Add employee
+                           5. Edit employee details 
+                           6. Edit personal profile
+
+Database : Employees Table
+
+                    Id(pk), EmpId, EmpName, DeptId(fk), Mobile No, email, DesigId(fk), Date of birth, Date of joining, EmpAddress,Status
+
+                   Department Table : DeptId(pk), DeptName
+
+                   Designation Table : DesigId(pk), DesigName
+ 
+                   
+            
+                   
